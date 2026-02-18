@@ -16,10 +16,10 @@ This project builds a classification model to automate loan approval decisions b
 
 ## Tech Stack
 - Python
-- Pandas & NumPy
+- Pandas
+- NumPy
 - Scikit-learn
 - Matplotlib / Seaborn
-- Streamlit (Deployment in progress)
 
 ---
 
@@ -63,10 +63,13 @@ After comparing performance across models, Logistic Regression achieved the most
 
 ---
 
-## Deployment
-The model is currently being deployed using Streamlit to create an interactive web application.
+CreditWise/
+│
+├── CreditWise_Model.ipynb   # Complete ML pipeline (EDA + Training + Evaluation)
+├── requirements.txt         # Required Python libraries
+└── README.md                # Project documentation
+
 
 ---
-
-## 📂 Project Structure
+Note: Dataset is not included in this repository due to privacy considerations.
 
