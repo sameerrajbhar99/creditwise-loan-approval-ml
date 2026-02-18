@@ -65,9 +65,9 @@ After comparing performance across models, Logistic Regression achieved the most
 
 CreditWise/
 │
-├── CreditWise_Model.ipynb   # Complete ML pipeline (EDA + Training + Evaluation)
-├── requirements.txt         # Required Python libraries
-└── README.md                # Project documentation
+├── CreditWise_Model.ipynb
+├── requirements.txt
+└── README.md
 
 
 ---
