@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreditWise | Intelligent Loan Approvals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <h1>CreditWise</h1>
+            </div>
+            <p>Intelligent ML-Powered Loan Approval</p>
+        </header>
+
+        <section class="glass-card" id="form-card">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <div class="step-indicators">
+                    <div class="step active" data-step="1">1</div>
+                    <div class="step" data-step="2">2</div>
+                    <div class="step" data-step="3">3</div>
+                </div>
+            </div>
+
+            <form id="loan-form">
+                <!-- Step 1: Personal Info -->
+                <div class="form-step active" id="step-1">
+                    <h2>Personal Information</h2>
+                    <p class="subtitle">Tell us a bit about yourself</p>
+                    
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="Age">Age</label>
+                            <input type="number" id="Age" name="Age" min="18" max="100" required placeholder="e.g., 35">
+                        </div>
+                        <div class="input-group">
+                            <label for="Gender">Gender</label>
+                            <select id="Gender" name="Gender" required>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="Marital_Status">Marital Status</label>
+                            <select id="Marital_Status" name="Marital_Status" required>
+                                <option value="Married">Married</option>
+                                <option value="Single">Single</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="Dependents">Dependents</label>
+                            <input type="number" id="Dependents" name="Dependents" min="0" max="10" required placeholder="e.g., 2">
+                        </div>
+                        <div class="input-group">
+                            <label for="Education_Level">Education</label>
+                            <select id="Education_Level" name="Education_Level" required>
+                                <option value="Graduate">Graduate</option>
+                                <option value="Not Graduate">Not Graduate</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="button-container right">
+                        <button type="button" class="btn btn-primary next-btn">Next Step ➔</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Financial Info -->
+                <div class="form-step" id="step-2">
+                    <h2>Financial Details</h2>
+                    <p class="subtitle">Income and credit history</p>
+                    
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="Applicant_Income">Applicant Income ($)</label>
+                            <input type="number" id="Applicant_Income" name="Applicant_Income" required placeholder="e.g., 5000">
+                        </div>
+                        <div class="input-group">
+                            <label for="Coapplicant_Income">Co-applicant Income ($)</label>
+                            <input type="number" id="Coapplicant_Income" name="Coapplicant_Income" value="0" required placeholder="e.g., 0">
+                        </div>
+                        <div class="input-group">
+                            <label for="Employment_Status">Employment Status</label>
+                            <select id="Employment_Status" name="Employment_Status" required>
+                                <option value="Salaried">Salaried</option>
+                                <option value="Self-employed">Self-employed</option>
+                                <option value="Unemployed">Unemployed</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="Employer_Category">Employer Category</label>
+                            <select id="Employer_Category" name="Employer_Category" required>
+                                <option value="Private">Private</option>
+                                <option value="Government">Government</option>
+                                <option value="MNC">MNC</option>
+                                <option value="Unemployed">Unemployed</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="Credit_Score">Credit Score</label>
+                            <input type="number" id="Credit_Score" name="Credit_Score" min="300" max="850" required placeholder="300 - 850">
+                        </div>
+                        <div class="input-group">
+                            <label for="DTI_Ratio">DTI Ratio (0.0 - 1.0)</label>
+                            <input type="number" id="DTI_Ratio" name="DTI_Ratio" step="0.01" min="0" max="1" required placeholder="e.g., 0.35">
+                        </div>
+                        <div class="input-group">
+                            <label for="Savings">Savings ($)</label>
+                            <input type="number" id="Savings" name="Savings" required placeholder="e.g., 15000">
+                        </div>
+                        <div class="input-group">
+                            <label for="Existing_Loans">Existing Loans</label>
+                            <input type="number" id="Existing_Loans" name="Existing_Loans" min="0" required placeholder="e.g., 1">
+                        </div>
+                    </div>
+                    
+                    <div class="button-container space-between">
+                        <button type="button" class="btn btn-secondary prev-btn">🡠 Back</button>
+                        <button type="button" class="btn btn-primary next-btn">Next Step ➔</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Loan Details -->
+                <div class="form-step" id="step-3">
+                    <h2>Loan Request</h2>
+                    <p class="subtitle">What do you need the loan for?</p>
+                    
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="Loan_Amount">Loan Amount ($)</label>
+                            <input type="number" id="Loan_Amount" name="Loan_Amount" required placeholder="e.g., 25000">
+                        </div>
+                        <div class="input-group">
+                            <label for="Loan_Term">Loan Term (Months)</label>
+                            <select id="Loan_Term" name="Loan_Term" required>
+                                <option value="12">12 Months (1 yr)</option>
+                                <option value="24">24 Months (2 yrs)</option>
+                                <option value="36" selected>36 Months (3 yrs)</option>
+                                <option value="48">48 Months (4 yrs)</option>
+                                <option value="60">60 Months (5 yrs)</option>
+                                <option value="72">72 Months (6 yrs)</option>
+                                <option value="84">84 Months (7 yrs)</option>
+                                <option value="120">120 Months (10 yrs)</option>
+                                <option value="360">360 Months (30 yrs)</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="Loan_Purpose">Loan Purpose</label>
+                            <select id="Loan_Purpose" name="Loan_Purpose" required>
+                                <option value="Personal">Personal</option>
+                                <option value="Home">Home</option>
+                                <option value="Education">Education</option>
+                                <option value="Car">Car</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="Collateral_Value">Collateral Value ($)</label>
+                            <input type="number" id="Collateral_Value" name="Collateral_Value" required placeholder="e.g., 50000">
+                        </div>
+                        <div class="input-group">
+                            <label for="Property_Area">Property Area</label>
+                            <select id="Property_Area" name="Property_Area" required>
+                                <option value="Urban">Urban</option>
+                                <option value="Semiurban">Semi-urban</option>
+                                <option value="Rural">Rural</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="button-container space-between">
+                        <button type="button" class="btn btn-secondary prev-btn">🡠 Back</button>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="submit-text">Evaluate Loan</span>
+                            <div class="loader hidden"></div>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Result Section -->
+        <section class="glass-card result-card hidden" id="result-card">
+            <h2 id="result-title">Analysis Complete</h2>
+            
+            <div class="gauge-container">
+                <div class="gauge">
+                    <svg viewBox="0 0 100 50" class="gauge-svg">
+                        <path class="gauge-bg" d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke-width="12" stroke-linecap="round"/>
+                        <path class="gauge-fill" id="gauge-fill" d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke-width="12" stroke-linecap="round" stroke-dasharray="125.6" stroke-dashoffset="125.6"/>
+                    </svg>
+                    <div class="gauge-center">
+                        <span id="prob-percentage">0%</span>
+                        <span class="prob-label">Approval Chance</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-banner" id="status-banner">
+                <div class="status-icon" id="status-icon">✓</div>
+                <div class="status-text">
+                    <h3 id="decision-text">Approved</h3>
+                    <p id="decision-subtext">Congratulations! Your profile meets our criteria.</p>
+                </div>
+            </div>
+
+            <button class="btn btn-primary full-width" id="reset-btn">Evaluate Another Loan</button>
+        </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
