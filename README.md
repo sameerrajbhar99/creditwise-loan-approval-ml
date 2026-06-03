@@ -1,6 +1,6 @@
 # CreditWise: Loan Approval Prediction using Machine Learning
 
-[![Deploy to Render](https://creditwise-loan-approval-ml-3.onrender.com)
+# Deployed -> https://creditwise-loan-approval-ml-3.onrender.com
 
 ## Project Overview
 CreditWise is an end-to-end supervised Machine Learning project designed to predict loan approval status based on applicant financial and credit-related information.
