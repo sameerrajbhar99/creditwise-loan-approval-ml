@@ -1,5 +1,7 @@
 # CreditWise: Loan Approval Prediction using Machine Learning
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/sameerrajbhar99/creditwise-loan-approval-ml)
+
 ## Project Overview
 CreditWise is an end-to-end supervised Machine Learning project designed to predict loan approval status based on applicant financial and credit-related information.
 
@@ -44,12 +46,14 @@ The system classifies whether a loan should be approved or rejected using multip
 ---
 
 ## Deployment to Cloud
-This application is ready to be deployed to platforms like **Render**, **Heroku**, or **Railway**.
-A `Procfile` is included for immediate compatibility with standard Python hosting environments.
+This application is natively configured to deploy with one click to **Render**.
 
-- **Heroku / Render setup**: 
-  - Ensure the `model/` directory is generated before pushing (or run the training script as part of the build step).
-  - The `Procfile` correctly points to `web: gunicorn app:app`.
+1. Click the **Deploy to Render** button at the top of this README.
+2. Sign in to your Render account (it's free!).
+3. Render will automatically detect the Python environment, install dependencies, and start the app using Gunicorn.
+4. Once deployed, Render will provide a live URL (e.g., `https://creditwise-loan-approval.onrender.com`) that you can add to your repository or share with interviewers!
+
+Alternatively, a `Procfile` is included for compatibility with Heroku. Ensure the `model/` directory is generated before pushing.
 
 ---
 
